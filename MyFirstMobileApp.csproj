@@ -49,14 +49,32 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="ViewViewModel\NewFolder\**" />
+	  <Compile Remove="ViewViewModel\NewFolder\**" />
+	  <EmbeddedResource Remove="ViewViewModel\NewFolder\**" />
+	  <MauiCss Remove="ViewViewModel\NewFolder\**" />
+	  <MauiXaml Remove="ViewViewModel\NewFolder\**" />
+	  <None Remove="ViewViewModel\NewFolder\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="ViewViewModel\Layouts\LayoutContents\LayoutView.xaml.cs">
+	    <DependentUpon>LayoutView.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiXaml Update="ViewViewModel\Main\MainView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="ViewViewModel\StackLayoutContents\StackLayoutView.xaml">
+	  <MauiXaml Update="ViewViewModel\Layouts\StackLayoutContents\StackLayoutView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModel\Layouts\LayoutContents\LayoutView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

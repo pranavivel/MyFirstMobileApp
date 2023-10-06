@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstMobileApp.ViewViewModel.Layouts.LayoutContents.LayoutView"
+             Title="LayoutView">
+    <!--Title ="{Binding Title}">-->
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="3" />
+        </Style>
+    </ContentPage.Resources>
+
+    <!-- Creates the VerticalStackLayout for all the buttons - 3 rows; 2 columns-->
+    <VerticalStackLayout>
+        <Grid Margin="25, 35, 20, 20">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="55"/>
+                <RowDefinition Height="55"/>
+                <RowDefinition Height="55"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- References the binded data from the ViewModel, with BindingContext from StackLayoutView.xaml.cs-->
+            <Button Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Text="{Binding TitleStackLayout}"
+                    Command="{Binding OnLayoutsClicked}"/>
+
+            <Button Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="1"
+                    Text="{Binding BtnVerticalStack}"
+                    Command="{Binding OnLayoutsClicked}"/>
+
+            <Button Grid.Row="1"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="1"
+                    Text="{Binding BtnHorizontalStack}"
+                    Command="{Binding OnLayoutsClicked}"/>
+
+            <Button Grid.Row="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Text="{Binding BtnAbsoluteLayout}"
+                    Command="{Binding OnLayoutsClicked}"/>
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

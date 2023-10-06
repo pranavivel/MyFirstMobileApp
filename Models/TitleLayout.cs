@@ -4,10 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Model
+
 namespace MyFirstMobileApp.Models
 {
     public class TitleLayout
     {
+        //NOT NEEDED for this project
+
         //Creates the databinding for page StackLayoutView
         public static String StackLayoutTitle { get; set; } = "Stack Layout";
         public static String VerticalStackTitle { get; set; } = "Vertical Stack";
