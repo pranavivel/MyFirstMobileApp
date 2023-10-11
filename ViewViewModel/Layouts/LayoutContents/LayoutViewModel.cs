@@ -7,14 +7,14 @@ namespace MyFirstMobileApp.ViewViewModel.Layouts.LayoutContents;
 public class LayoutViewModel : ContentView
 {
 
-    //The data from TitleLayouts
+    //Text Titles
     public string TitleStackLayout { get; set; } = TitleLayout.StackLayoutTitle;
-    public string BtnVerticalStack { get; set; } = TitleLayout.VerticalStackTitle;
-    public string BtnHorizontalStack { get; set; } = TitleLayout.HorizontalStackTitle;
-    public string BtnAbsoluteLayout { get; set; } = TitleLayout.AbsoluteLayoutTitle;
+    public string TitleVerticalStack { get; set; } = TitleLayout.VerticalStackTitle;
+    public string TitleHorizontalStack { get; set; } = TitleLayout.HorizontalStackTitle;
+    public string TitleAbsolutestack { get; set; } = TitleLayout.AbsoluteLayoutTitle;
 
-    public string Layouts { get; set; }
 
+    //Commands
     public ICommand OnLayoutsClicked { get; set; }
 
     public LayoutViewModel()
