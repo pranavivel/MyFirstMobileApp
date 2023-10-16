@@ -17,5 +17,6 @@ namespace MyFirstMobileApp.Models
         public static String VerticalStackTitle { get; set; } = "Vertical Stack";
         public static String HorizontalStackTitle { get; set; } = "Horizontal Stack";
         public static String AbsoluteLayoutTitle { get; set; } = "Absolute Layout";
+        public static String FlexLayoutTitle { get; set; } = "Flex Layout";
     }
 }

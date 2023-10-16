@@ -19,6 +19,7 @@
                 <RowDefinition Height="55"/>
                 <RowDefinition Height="55"/>
                 <RowDefinition Height="55"/>
+                <RowDefinition Height="55"/>
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -37,20 +38,25 @@
                     Grid.Column="0"
                     Grid.ColumnSpan="1"
                     Text="{Binding TitleVerticalStack}"
-                    Command="{Binding OnLayoutsClicked}"/>
+                    Command="{Binding OnVerticalClicked}"/>
 
-            
             <Button Grid.Row="1"
                     Grid.Column="1"
                     Grid.ColumnSpan="1"
                     Text="{Binding TitleHorizontalStack}"
-                    Command="{Binding OnLayoutsClicked}"/>
+                    Command="{Binding OnHorizontalClicked}"/>
 
             <Button Grid.Row="2"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
                     Text="{Binding TitleAbsolutestack}"
-                    Command="{Binding OnLayoutsClicked}"/>
+                    Command="{Binding OnAbsoluteClicked}"/>
+
+            <Button Grid.Row="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Text="{Binding TitleFlexStack}"
+                Command="{Binding OnFlexClicked}"/>
 
         </Grid>
     </VerticalStackLayout>

@@ -62,12 +62,27 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="ViewViewModel\Layouts\HorizontalStackContents\HorizontalStackView.xaml.cs">
+	    <DependentUpon>HorizontalStackView.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="ViewViewModel\Layouts\LayoutContents\LayoutView.xaml.cs">
 	    <DependentUpon>LayoutView.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="ViewViewModel\Layouts\AbsoluteLayoutContents\AbsoluteLayoutView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModel\Layouts\FlexLayoutContents\FlexLayoutView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModel\Layouts\HorizontalStackContents\HorizontalStackView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModel\Layouts\VerticalStackContents\VerticalStackView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ViewViewModel\Main\MainView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
