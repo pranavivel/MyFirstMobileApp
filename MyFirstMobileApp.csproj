@@ -62,15 +62,24 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="ViewViewModel\Layouts\HorizontalStackContents\HorizontalStackView.xaml.cs">
-	    <DependentUpon>HorizontalStackView.xaml</DependentUpon>
-	  </Compile>
 	  <Compile Update="ViewViewModel\Layouts\LayoutContents\LayoutView.xaml.cs">
 	    <DependentUpon>LayoutView.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="ViewViewModel\AppImages\ActivityIndicatorContents\ActivityIndicatorView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModel\AppImages\EmbeddedContents\EmbeddedView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModel\AppImages\ImagesMenuContents\ImagesMenuView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModel\AppImages\URIContents\URIView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ViewViewModel\Layouts\AbsoluteLayoutContents\AbsoluteLayoutView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

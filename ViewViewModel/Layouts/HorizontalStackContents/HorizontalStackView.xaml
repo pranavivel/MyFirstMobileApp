@@ -1,16 +1,40 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyFirstMobileApp.ViewViewModel.Layouts.HorizontalStackContents.HorizontalLayoutView"
+             x:Class="MyFirstMobileApp.ViewViewModel.Layouts.HorizontalStackContents.HorizontalStackView"
              Title="HorizontalLayoutView">
+
     <HorizontalStackLayout>
-        <StackLayout Margin="35"
+        <HorizontalStackLayout 
             VerticalOptions="Center"
             HorizontalOptions="Center">
 
-            <BoxView WidthRequest="50"
-             HeightRequest="50"
-             Color="red" />
+            <!--- Red Box -->
+            <BoxView WidthRequest="105"
+                HeightRequest="105"
+                Color="Red" />
+
+            <!--- Green Box -->
+            <BoxView WidthRequest="105"
+                HeightRequest="105"
+                Color="Green" />
+
+            <!--- Blue Box -->
+            <BoxView WidthRequest="105"
+                HeightRequest="105"
+                Color="Blue" />
+        </HorizontalStackLayout>
+
+        <!--- Purple Box -->
+        <StackLayout 
+            VerticalOptions="End"
+            HorizontalOptions="End">
+
+            <BoxView WidthRequest="100"
+                HeightRequest="100"
+                Color="Purple" />
         </StackLayout>
+
     </HorizontalStackLayout>
+
 </ContentPage>

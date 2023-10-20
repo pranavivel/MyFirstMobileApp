@@ -1,8 +1,8 @@
 namespace MyFirstMobileApp.ViewViewModel.Layouts.HorizontalStackContents;
 
-public partial class HorizontalLayoutView : ContentPage
+public partial class HorizontalStackView : ContentPage
 {
-	public HorizontalLayoutView()
+	public HorizontalStackView()
 	{
 		InitializeComponent();
 	}

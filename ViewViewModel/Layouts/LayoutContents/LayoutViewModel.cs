@@ -1,6 +1,15 @@
 ﻿using MyFirstMobileApp.Models;
 using MyFirstMobileApp.ViewViewModel.Layouts.StackLayoutContents;
+
+
 using System.Windows.Input;
+using MyFirstMobileApp.ViewViewModel.Layouts.VerticalStackContents;
+
+using MyFirstMobileApp.ViewViewModel.Layouts.HorizontalStackContents;
+
+using MyFirstMobileApp.ViewViewModel.Layouts.AbsoluteLayoutContents;
+
+using MyFirstMobileApp.ViewViewModel.Layouts.FlexLayoutContents;
 
 namespace MyFirstMobileApp.ViewViewModel.Layouts.LayoutContents;
 
@@ -20,6 +29,7 @@ public class LayoutViewModel : ContentView
     public ICommand OnVerticalClicked { get; set; }
     public ICommand OnHorizontalClicked { get; set; }
     public ICommand OnAbsoluteClicked { get; set; }
+    public ICommand OnFlexClicked { get; set; }
 
     public LayoutViewModel()
     {
@@ -27,6 +37,7 @@ public class LayoutViewModel : ContentView
         OnVerticalClicked = new Command(OnVerticalClickedAsync);
         OnHorizontalClicked = new Command(OnHorizontalClickedAsync);
         OnAbsoluteClicked = new Command(OnAbsoluteClickedAsync);
+        OnFlexClicked = new Command(OnFlexClickedAsync);
     }
 
     private async void OnLayoutsClickedAsync()
@@ -36,22 +47,22 @@ public class LayoutViewModel : ContentView
 
     private async void OnVerticalClickedAsync()
     {
-        await Application.Current.MainPage.Navigation.PushAsync(new StackLayoutView());
+        await Application.Current.MainPage.Navigation.PushAsync(new VerticalStackView());
     }
 
     private async void OnHorizontalClickedAsync()
     {
-        await Application.Current.MainPage.Navigation.PushAsync(new StackLayoutView());
+        await Application.Current.MainPage.Navigation.PushAsync(new HorizontalStackView());
     }
 
     private async void OnAbsoluteClickedAsync()
     {
-        await Application.Current.MainPage.Navigation.PushAsync(new StackLayoutView());
+        await Application.Current.MainPage.Navigation.PushAsync(new AbsoluteLayoutView());
     }
 
     private async void OnFlexClickedAsync()
     {
-        await Application.Current.MainPage.Navigation.PushAsync(new StackLayoutView());
+        await Application.Current.MainPage.Navigation.PushAsync(new FlexLayoutView());
     }
 
 

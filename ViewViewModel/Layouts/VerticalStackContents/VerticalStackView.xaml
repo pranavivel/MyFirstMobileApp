@@ -4,9 +4,35 @@
              x:Class="MyFirstMobileApp.ViewViewModel.Layouts.VerticalStackContents.VerticalStackView"
              Title="VerticalStackView">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+
+        <StackLayout>
+
+            <StackLayout>
+
+                <!--- Red Box -->
+                <BoxView WidthRequest="90"
+                     HeightRequest="90"
+                     Color="Red" />
+                
+                <!--- Green Box -->
+                <BoxView WidthRequest="90"
+                     HeightRequest="90"
+                     Color="Green" />
+
+                <!--- Blue Box -->
+                <BoxView WidthRequest="90"
+                     HeightRequest="90"
+                     Color="Blue" />
+
+                <!--- Purple Box -->
+                <BoxView HorizontalOptions="EndAndExpand"
+                     WidthRequest="90"
+                     HeightRequest="90"
+                     Color="Purple" />
+            </StackLayout>
+
+
+        </StackLayout>
+
     </VerticalStackLayout>
 </ContentPage>

@@ -25,14 +25,14 @@
 
             <Button Grid.Row="0"
                     Grid.Column="0"
-                    Text="Stack Layout" 
+                    Text="Layout" 
                     Padding="2"
                     Command="{Binding OnLayoutsClicked}" />
 
             <Button Grid.Row="0"
                 Grid.Column="1"
-                Text="0, 1" 
-                Command="{Binding OnLayoutsClicked}" />
+                Text="Images" 
+                Command="{Binding OnImagesClicked}" />
 
             <Button Grid.Row="1"
                 Grid.Column="0"
