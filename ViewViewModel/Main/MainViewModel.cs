@@ -9,7 +9,7 @@ namespace MyFirstMobileApp.ViewViewModel.Main;
 public class MainViewModel : BaseViewModel
 {
     public String LayoutTitle { get; set; } = TitleMain.TitleLayout;
-    public String TitleImages { get; set; } = TitleMain.TitleImages;
+    public String ImagesTitle { get; set; } = TitleMain.TitleImages;
     public String Button10Title { get; set; } = TitleMain.TitleButton10;
     public String Button11Title { get; set; } = TitleMain.TitleButton11;
 

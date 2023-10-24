@@ -11,5 +11,6 @@ namespace MyFirstMobileApp.Models
         public static String TitleURI { get; set; } = "URI";
         public static String TitleEmbedded { get; set; } = "Embedded";
         public static String TitleActivityIndicator { get; set; } = "Activity Indicator";
+
     }
 }
