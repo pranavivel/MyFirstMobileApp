@@ -37,7 +37,7 @@
             <Button Grid.Row="1"
                 Grid.Column="0"
                 Text="1, 0" 
-                Command="{Binding OnLayoutsClicked}" />
+                Command="{Binding OnCollectionsClicked}" />
 
             <Button Grid.Row="1"
                 Grid.Column="1"

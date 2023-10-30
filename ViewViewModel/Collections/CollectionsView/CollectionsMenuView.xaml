@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstMobileApp.ViewViewModel.Collections.CollectionsView.CollectionsMenuView"
+             Title="CollectionsMenuView">
+    <!-- Applying a "Style" to the buttons. This will provide a space between the buttons -->
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="10" />
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout Padding="20"
+                         HorizontalOptions="Fill"
+                         VerticalOptions="CenterAndExpand">
+
+        <Button Text="Collection" FontAttributes="Bold" FontSize="Large" TextColor="Yellow" Command="{Binding OnCollectionViewClicked}" />
+
+        <Button Text="Collection w/Images" FontAttributes="Bold" FontSize="Large" TextColor="Aqua" Command="{Binding OnCollectionWImagesViewClicked}" />
+
+        <Button Text="Collection w/Buttons" FontAttributes="Bold" FontSize="Large" TextColor="Lime" Command="{Binding OnCollectionViewButtonsClicked}" />
+
+        <Button Text="Collection w/Icons" FontAttributes="Bold" FontSize="Large" TextColor="LightYellow" Command="{Binding OnCollectionViewIconClicked}" />
+
+    </StackLayout>
+    
+</ContentPage>

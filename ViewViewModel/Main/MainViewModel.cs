@@ -10,13 +10,14 @@ public class MainViewModel : BaseViewModel
 {
     public String LayoutTitle { get; set; } = TitleMain.TitleLayout;
     public String ImagesTitle { get; set; } = TitleMain.TitleImages;
-    public String Button10Title { get; set; } = TitleMain.TitleButton10;
+   // public String CollectionTitle { get; set; } = TitleMain.TitleCollections;
     public String Button11Title { get; set; } = TitleMain.TitleButton11;
 
     public string Layouts { get; set; } 
 
 	public ICommand OnLayoutsClicked { get; set; }
     public ICommand OnImagesClicked { get; set; }
+    public ICommand OnCollectionsClicked { get; set; }
 
 
 
@@ -26,6 +27,7 @@ public class MainViewModel : BaseViewModel
 
 		OnLayoutsClicked = new Command(OnLayoutsClickedAsync);
         OnImagesClicked = new Command(OnImagesClickedAsync);
+        OnCollectionsClicked = new Command(OnCollectionsClickedAsync);
 
     }
 
@@ -37,5 +39,10 @@ public class MainViewModel : BaseViewModel
     private async void OnImagesClickedAsync()
     {
         await Application.Current.MainPage.Navigation.PushAsync(new ImagesMenuView());
+    }
+
+    private async void OnCollectionsClickedAsync()
+    {
+        await Application.Current.MainPage.Navigation.PushAsync(new CollectionsMenuView());
     }
 }
