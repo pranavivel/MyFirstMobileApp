@@ -1,48 +1,47 @@
-﻿using System;
+﻿using MyFirstMobileApp.Models.Titles;
+using MyFirstMobileApp.ViewViewModel.Collections.CollectionsView;
+using MyFirstMobileApp.ViewViewModel.Collections.ImagesView;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace MyFirstMobileApp.ViewViewModel.Collections.CollectionsMenuViewView
 {
-    public class CollectionsMenuViewModel
+    public class CollectionsMenuViewModel : ContentView
     {
+
+        public String CollectionsMenuTitle { get; set; } = TitleCollectionMenu.TitleCollection;
+        public String KFPImagesTitle { get; set; } = TitleCollectionMenu.TitleKFPImages;
+
         //Button Commands
         public ICommand OnCollectionViewClicked { get; set; }
-        public ICommand OnCollectionWImagesViewClicked { get; set; }
-        public ICommand OnCollectionViewButtonsClicked { get; set; }
-        public ICommand OnCollectionViewIconClicked { get; set; }
+        public ICommand OnKFPCollectionWImagesViewClicked { get; set; }
+        //public ICommand OnCollectionViewButtonsClicked { get; set; }
+        //public ICommand OnCollectionViewIconClicked { get; set; }
 
         public CollectionsMenuViewModel()
         {
-            Title = Titles.TitleCollectionMenu;
 
             //Set Commmands
             OnCollectionViewClicked = new Command(OnCollectionViewClickedAsync);
-            OnCollectionWImagesViewClicked = new Command(OnCollectionWImagesViewClickedAsync);
-            OnCollectionViewButtonsClicked = new Command(OnCollectionViewButtonsClickedAsync);
-            OnCollectionViewIconClicked = new Command(OnCollectionViewIconClickedAsync);
+            OnKFPCollectionWImagesViewClicked = new Command(OnKFPCollectionWImagesViewClickedAsync);
+            //OnCollectionViewButtonsClicked = new Command(OnCollectionViewButtonsClickedAsync);
+            //OnCollectionViewIconClicked = new Command(OnCollectionViewIconClickedAsync);
         }
 
         private async void OnCollectionViewClickedAsync(object obj)
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new MoviesCollectionView());
+            await Application.Current.MainPage.Navigation.PushAsync(new CollectionsMenuView());
         }
 
-        private async void OnCollectionWImagesViewClickedAsync(object obj)
+        private async void OnKFPCollectionWImagesViewClickedAsync(object obj)
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new GOGCollectionWImagesView());
+            await Application.Current.MainPage.Navigation.PushAsync(new KFPCollectionWImagesView());
         }
 
-        private async void OnCollectionViewButtonsClickedAsync(object obj)
-        {
-            await Application.Current.MainPage.Navigation.PushAsync(new UpdateableCollectionWButtonsView());
-        }
-
-        private async void OnCollectionViewIconClickedAsync(object obj)
-        {
-            await Application.Current.MainPage.Navigation.PushAsync(new UpdatableCollectionWIconsView());
-        }
+        
     }
 }

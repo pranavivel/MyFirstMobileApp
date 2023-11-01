@@ -14,9 +14,11 @@ namespace MyFirstMobileApp.Models
 
         public static String TitleImages { get; set; } = "Images";
 
-        public static String TitleButton10 { get; set; } = "Button 1 0";
+        public static String TitleCollections { get; set; } = "Collections";
 
         public static String TitleButton11 { get; set; } = "Button 1 1";
+
+        public static String TitleSQLite { get; set; } = "SQLite";
 
     }
 }

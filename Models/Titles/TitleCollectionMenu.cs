@@ -8,6 +8,7 @@ namespace MyFirstMobileApp.Models.Titles
 {
     public static class TitleCollectionMenu
     {
-        public static string CollectionTitle { get; } = "Collection Menu";
+        public static string TitleCollection { get; } = "Collection";
+        public static string TitleKFPImages { get; } = "KFP Images";
     }
 }

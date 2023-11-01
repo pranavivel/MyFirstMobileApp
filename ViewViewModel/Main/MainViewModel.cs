@@ -1,6 +1,7 @@
 using MyFirstMobileApp.Models;
 using MyFirstMobileApp.ViewModels;
 using MyFirstMobileApp.ViewViewModel.AppImages.ImagesMenuContents;
+using MyFirstMobileApp.ViewViewModel.Collections.CollectionsView;
 using MyFirstMobileApp.ViewViewModel.Layouts.LayoutContents;
 using System.Windows.Input;
 
@@ -10,14 +11,16 @@ public class MainViewModel : BaseViewModel
 {
     public String LayoutTitle { get; set; } = TitleMain.TitleLayout;
     public String ImagesTitle { get; set; } = TitleMain.TitleImages;
-   // public String CollectionTitle { get; set; } = TitleMain.TitleCollections;
+    public String CollectionTitle { get; set; } = TitleMain.TitleCollections;
     public String Button11Title { get; set; } = TitleMain.TitleButton11;
+    //public String SQLiteTitle { get; set; } = TitleMain.TitleSQLite;
 
     public string Layouts { get; set; } 
 
 	public ICommand OnLayoutsClicked { get; set; }
     public ICommand OnImagesClicked { get; set; }
     public ICommand OnCollectionsClicked { get; set; }
+    //public ICommand OnSQLiteClicked { get; set; }
 
 
 
@@ -28,6 +31,8 @@ public class MainViewModel : BaseViewModel
 		OnLayoutsClicked = new Command(OnLayoutsClickedAsync);
         OnImagesClicked = new Command(OnImagesClickedAsync);
         OnCollectionsClicked = new Command(OnCollectionsClickedAsync);
+        //OnSQLiteClicked = new Command(OnSQLiteClickedAsync);
+        
 
     }
 
@@ -45,4 +50,10 @@ public class MainViewModel : BaseViewModel
     {
         await Application.Current.MainPage.Navigation.PushAsync(new CollectionsMenuView());
     }
+
+    //private async void OnSQLiteClickedAsync()
+    //{
+        //await Application.Current.MainPage.Navigation.PushAsync(new CollectionsMenuView());
+    //}
+
 }
