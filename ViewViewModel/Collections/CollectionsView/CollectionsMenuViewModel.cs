@@ -14,7 +14,6 @@ namespace MyFirstMobileApp.ViewViewModel.Collections.CollectionsMenuViewView
     {
 
         public String CollectionsMenuTitle { get; set; } = TitleCollectionMenu.TitleCollection;
-        public String KFPImagesTitle { get; set; } = TitleCollectionMenu.TitleKFPImages;
 
         //Button Commands
         public ICommand OnCollectionViewClicked { get; set; }

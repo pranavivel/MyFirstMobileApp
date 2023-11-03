@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace MyFirstMobileApp.Models.Titles
 {
-    public static class TitleCollectionMenu
+    public static class TitleKPFMoviesCollection
     {
-        public static string TitleCollection { get; } = "Collection";
+        public static string KungFuPandaMoviesTitle { get; } = "Kung Fu Panda Movies";
     }
 }
