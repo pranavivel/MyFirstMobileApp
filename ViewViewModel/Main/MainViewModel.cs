@@ -1,9 +1,9 @@
-using MyFirstMobileApp.Models;
 using MyFirstMobileApp.ViewModels;
 using MyFirstMobileApp.ViewViewModel.AppImages.ImagesMenuContents;
-using MyFirstMobileApp.ViewViewModel.Collections.CollectionsView;
 using MyFirstMobileApp.ViewViewModel.Layouts.LayoutContents;
 using System.Windows.Input;
+using MyFirstMobileApp.ViewViewModels.Collections;
+using MyFirstMobileApp._Resources.Models.Titles;
 
 namespace MyFirstMobileApp.ViewViewModel.Main;
 
@@ -48,7 +48,7 @@ public class MainViewModel : BaseViewModel
 
     private async void OnCollectionsClickedAsync()
     {
-        await Application.Current.MainPage.Navigation.PushAsync(new CollectionsMenuView());
+        await Application.Current.MainPage.Navigation.PushAsync(new CollectionMenuView());
     }
 
     //private async void OnSQLiteClickedAsync()

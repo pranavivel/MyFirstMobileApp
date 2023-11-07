@@ -1,5 +1,5 @@
 ﻿
-using MyFirstMobileApp.Models;
+using MyFirstMobileApp._Resources.Models.Titles;
 using MyFirstMobileApp.ViewModels;
 
 namespace MyFirstMobileApp.ViewViewModel.AppImages.EmbeddedContents

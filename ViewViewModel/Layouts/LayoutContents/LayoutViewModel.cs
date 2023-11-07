@@ -1,5 +1,4 @@
-﻿using MyFirstMobileApp.Models;
-using MyFirstMobileApp.ViewViewModel.Layouts.StackLayoutContents;
+﻿using MyFirstMobileApp.ViewViewModel.Layouts.StackLayoutContents;
 
 
 using System.Windows.Input;
@@ -10,6 +9,7 @@ using MyFirstMobileApp.ViewViewModel.Layouts.HorizontalStackContents;
 using MyFirstMobileApp.ViewViewModel.Layouts.AbsoluteLayoutContents;
 
 using MyFirstMobileApp.ViewViewModel.Layouts.FlexLayoutContents;
+using MyFirstMobileApp._Resources.Models.Titles;
 
 namespace MyFirstMobileApp.ViewViewModel.Layouts.LayoutContents;
 

@@ -1,4 +1,4 @@
-﻿using MyFirstMobileApp.Models;
+﻿using MyFirstMobileApp._Resources.Models.Titles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
