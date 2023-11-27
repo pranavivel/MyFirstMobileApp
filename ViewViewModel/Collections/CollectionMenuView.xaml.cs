@@ -6,7 +6,7 @@ public partial class CollectionMenuView : ContentPage
 {
 	public CollectionMenuView()
 	{
-		InitializeComponent();
+        InitializeComponent();
 		BindingContext = new CollectionMenuViewModel();
 	}
 }

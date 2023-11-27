@@ -10,7 +10,7 @@ namespace MyFirstMobileApp.ViewViewModel.CollectionsUpdatable.AddEdit
     public class AddCollectionViewModel : BaseViewModel
     {
         public ICommand SaveBtnClicked { get; set; }
-        private string _movieName = string.Empty;
+        private string _plantName = string.Empty;
 
         public AddCollectionViewModel()
         {
@@ -18,30 +18,30 @@ namespace MyFirstMobileApp.ViewViewModel.CollectionsUpdatable.AddEdit
             SaveBtnClicked = new Command(PerformSave);
         }
 
-        public string MovieName
+        public string PlantName
         {
-            get { return _movieName; }
+            get { return _plantName; }
 
             set
             {
-                if (_movieName != value)
-                    SetProperty(ref _movieName, value);
+                if (_plantName != value)
+                    SetProperty(ref _plantName, value);
             }
         }
 
         private void PerformSave()
         {
-            if (string.IsNullOrEmpty(_movieName.Trim()))
+            if (string.IsNullOrEmpty(_plantName.Trim()))
             {
                 // Use Page.DisplayAlert to display the alert
                 Application.Current.MainPage.DisplayAlert(TitlesMisc.AddTitle, Msgs.NotEmpty, "Ok");
                 return;
             }
 
-            MarvelMovies movies = new MarvelMovies();
-            movies.NameofMovie = _movieName;
+            PlantsSpecies plants = new PlantsSpecies();
+            plants.NameofPlant = _plantName;
 
-            MessagingCenter.Send<MarvelMovies>(movies, "AddMovies");
+            MessagingCenter.Send<PlantsSpecies>(plants, "AddPlants");
 
             if (Application.Current.MainPage is NavigationPage navigationPage)
             {

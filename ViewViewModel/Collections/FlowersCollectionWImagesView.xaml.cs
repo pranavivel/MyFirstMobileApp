@@ -2,9 +2,9 @@ using MyFirstMobileApp.ViewViewModel.Collections;
 
 namespace MyFirstMobileApp.ViewViewModels.Collections;
 
-public partial class GOGCollectionWImagesView : ContentPage
+public partial class FlowersCollectionWImagesView : ContentPage
 {
-	public GOGCollectionWImagesView()
+	public FlowersCollectionWImagesView()
 	{
 		InitializeComponent();
 		BindingContext = new FlowersCollectionWImagesViewModel();

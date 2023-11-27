@@ -5,10 +5,12 @@ namespace MyFirstMobileApp.ViewViewModels.CollectionsUpdatable.AddEdit;
 
 public partial class EditCollectionView : ContentPage
 {
-	public EditCollectionView(MarvelMovies marvel)
+    private PlantsSpecies plant;
+
+    public EditCollectionView(PlantsSpecies plant)
 	{
 		InitializeComponent();
 		BindingContext = new EditCollectionViewModel();
-		MovieTitle.Text = marvel.NameofMovie;
+		PlantTitle.Text = plant.NameofPlant;
 	}
 }

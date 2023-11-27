@@ -9,37 +9,37 @@ namespace MyFirstMobileApp.ViewViewModel.Collections
     public class PlantsCollectionViewModel : BaseViewModel
     {
         // ViewModel: Private fields
-        private List<Plants> _plants;
+        private List<PlantsSpecies> _plants;
 
         // ViewModel: Observable collection bound to the View
         // We use ObservableCollection to automatically update the View when the collection changes.
-        public ObservableCollection<Plants> PlantsCollection { get; }
+        public ObservableCollection<PlantsSpecies> PlantsCollection { get; }
 
         public PlantsCollectionViewModel()
         {
             // ViewModel: Setting the page title for the View
-            Title = TitleMarvelMoviesCollection.MarvelMoviesTitle;
+            Title = TitlePlantsCollection.PlantsTitle;
 
             // ViewModel: Initialize the ObservableCollection
-            PlantsCollection = new ObservableCollection<Plants>();
+            PlantsCollection = new ObservableCollection<PlantsSpecies>();
 
-            _plants = Plants.GetMovies();
-            LoadMovies();
+            _plants = PlantsSpecies.GetPlants();
+            LoadPlants();
         }
 
-        // ViewModel: Load movies into the ObservableCollection
-        private void LoadMovies()
+        // ViewModel: Load plants into the ObservableCollection
+        private void LoadPlants()
         {
             try
             {
                 // Clear the collection in the ViewModel
                 PlantsCollection.Clear();
 
-                // Loop through all the movies in the ViewModel collection
+                // Loop through all the plants in the ViewModel collection
                 foreach (var p in _plants)
                 {
-                    // Add the NameofMovie property of the individual movie to the ViewModel collection
-                    PlantsCollection.Add(new Plants { NameofPlant = p.NameofPlant });
+                    // Add the NameofPlant property of the individual plants to the ViewModel collection
+                    PlantsCollection.Add(new PlantsSpecies { NameofPlant = p.NameofPlant });
                 }
             }
             catch (Exception ex)

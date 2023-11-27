@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MyFirstMobileApp.Models.Entities"
-             x:Class="MyFirstMobileApp.ViewViewModels.Collections.GOGCollectionWImagesView"
+             x:Class="MyFirstMobileApp.ViewViewModels.Collections.FlowersCollectionWImagesView"
              Title="{Binding Title}">
 
     <ContentPage.Resources>
@@ -14,19 +14,19 @@
     </ContentPage.Resources>
 
     <CollectionView x:Name="ItemsListView"
-                    ItemsSource="{Binding GuardiansCollection}"
+                    ItemsSource="{Binding FlowersCollection}"
                     SelectionMode="None"
                     ItemsLayout="VerticalList">
 
         <CollectionView.ItemTemplate>
-            <DataTemplate x:DataType="local:ActorCharacterInfo">
+            <DataTemplate x:DataType="local:FlowerSpeciesInfo">
                 <StackLayout>
                     <FlexLayout Direction="Row" JustifyContent="Start" AlignItems="Start">
-                        <Image Source="{Binding ActorImage}" Aspect="AspectFill" WidthRequest="250" />
+                        <Image Source="{Binding FlowerImage}" Aspect="AspectFill" WidthRequest="250" />
 
                         <StackLayout FlexLayout.Grow="1" Padding="5" HorizontalOptions="StartAndExpand">
-                            <Label Text="{Binding ActorName}" FontAttributes="Bold" TextColor="CadetBlue" HorizontalOptions="Start" WidthRequest="100" />
-                            <Label Text="{Binding CharacterName}" FontAttributes="Italic, Bold" TextColor="Blue" HorizontalOptions="Start" WidthRequest="100"/>
+                            <Label Text="{Binding FlowerName}" FontAttributes="Bold" TextColor="CadetBlue" HorizontalOptions="Start" WidthRequest="100" />
+                            <Label Text="{Binding FlowerNumber}" FontAttributes="Italic, Bold" TextColor="Blue" HorizontalOptions="Start" WidthRequest="100"/>
                         </StackLayout>
                     </FlexLayout>
 

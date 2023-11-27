@@ -10,7 +10,7 @@ namespace MyFirstMobileApp.ViewViewModel.CollectionsUpdatable.AddEdit
     public class EditCollectionViewModel : BaseViewModel
     {
         public ICommand UpdateBtnClicked { get; set; }
-        private string _movieName = string.Empty;
+        private string _plantName = string.Empty;
 
         public EditCollectionViewModel()
         {
@@ -18,32 +18,32 @@ namespace MyFirstMobileApp.ViewViewModel.CollectionsUpdatable.AddEdit
             UpdateBtnClicked = new Command(PerformSave);
         }
 
-        public string MovieName
+        public string Plant
         {
-            get { return _movieName; }
+            get { return _plantName; }
 
             set
             {
-                if (_movieName != value)
-                    // Use the SetProperty method to update the private field _movies
-                    // and trigger property change notifications when the Movies property value changes.
-                    SetProperty(ref _movieName, value);
+                if (_plantName != value)
+                    // Use the SetProperty method to update the private field _plants
+                    // and trigger property change notifications when the Plants property value changes.
+                    SetProperty(ref _plantName, value);
             }
         }
 
         private void PerformSave()
         {
-            if (string.IsNullOrEmpty(_movieName.Trim()))
+            if (string.IsNullOrEmpty(_plantName.Trim()))
             {
                 // Use Page.DisplayAlert to display the alert
                 Application.Current.MainPage.DisplayAlert(TitlesMisc.EditTitle, Msgs.NotEmpty, "Ok");
                 return;
             }
 
-            MarvelMovies movies = new MarvelMovies();
-            movies.NameofMovie = _movieName;
+            PlantsSpecies plants = new PlantsSpecies();
+            plants.NameofPlant = _plantName;
 
-            MessagingCenter.Send<MarvelMovies>(movies, "UpdateMovies");
+            MessagingCenter.Send<PlantsSpecies>(plants, "UpdatePlants");
             Application.Current.MainPage.Navigation.PopAsync();
         }
     }

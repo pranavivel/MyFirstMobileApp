@@ -33,12 +33,12 @@ namespace MyFirstMobileApp.ViewViewModel.Collections
 
         private async void OnCollectionViewClickedAsync(object obj)
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new MoviesCollectionView());
+            await Application.Current.MainPage.Navigation.PushAsync(new PlantsCollectionView());
         }
 
         private async void OnCollectionWImagesViewClickedAsync(object obj)
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new GOGCollectionWImagesView());
+            await Application.Current.MainPage.Navigation.PushAsync(new FlowersCollectionWImagesView());
         }
 
         private async void OnCollectionViewButtonsClickedAsync(object obj)

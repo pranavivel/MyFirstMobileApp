@@ -2,23 +2,23 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MyFirstMobileApp.Models.Entities"             
-             x:Class="MyFirstMobileApp.ViewViewModels.Collections.MoviesCollectionView"
+             x:Class="MyFirstMobileApp.ViewViewModels.Collections.PlantsCollectionView"
              Title="{Binding Title}">
 
     <StackLayout>
 
         <!-- View: Header Label -->
         <StackLayout HorizontalOptions="CenterAndExpand">
-            <Label Text="Movies" FontSize="50" FontAttributes="Bold,Italic" TextColor="CadetBlue" WidthRequest="170" />
+            <Label Text="Plants" FontSize="50" FontAttributes="Bold,Italic" TextColor="CadetBlue" WidthRequest="170" />
         </StackLayout>
 
         <!-- View: Separator Line -->
         <BoxView HeightRequest="2" BackgroundColor="#000000"/>
 
-        <!-- View: CollectionView to display Marvel movies -->
-        <!-- ViewModel: Binding to the "MarvelMoviesCollection" in the ViewModel -->
+        <!-- View: CollectionView to display plant -->
+        <!-- ViewModel: Binding to the "PlantsCollection" in the ViewModel -->
         <CollectionView x:Name="ItemsListView"
-                                ItemsSource="{Binding MarvelMoviesCollection}" 
+                                ItemsSource="{Binding PlantsCollection}" 
                                 SelectionMode="None">
 
             <CollectionView.ItemsLayout>
@@ -26,18 +26,18 @@
             </CollectionView.ItemsLayout>
 
             <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="local:MarvelMovies">
+                <DataTemplate x:DataType="local:PlantsSpecies">
                     <Grid Padding="2">
 
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
 
-                        <!-- View: Display name of the movie-->
+                        <!-- View: Display name of the plant-->
                         <StackLayout Orientation="Horizontal">
                             <StackLayout>
-                                <!-- ViewModel: Binding to the NameofMovie property in the ViewModel which is the property defined in the MarvelMovies model-->
-                                <Label Text="{Binding NameofMovie}" 
+                                <!-- ViewModel: Binding to the NameofPlant property in the ViewModel which is the property defined in the Plant model-->
+                                <Label Text="{Binding NameofPlant}" 
                                            FontAttributes="Bold"
                                            HorizontalTextAlignment="Start"
                                            TextColor="Black"

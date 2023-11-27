@@ -8,28 +8,28 @@ namespace MyFirstMobileApp.ViewViewModel.Collections
 {
     public class FlowersCollectionWImagesViewModel : BaseViewModel
     {
-        public ObservableCollection<ActorCharacterInfo> GuardiansCollection { get; }
+        public ObservableCollection<FlowerSpeciesInfo> FlowersCollection { get; }
 
-        private List<ActorCharacterInfo> _guardians;
+        private List<FlowerSpeciesInfo> _flowers;
 
         public FlowersCollectionWImagesViewModel()
         {
             Title = TitleCollectionWImages.CollectionWImagesTitle;
 
             //Instantiate Obervable GuardiansCollection
-            GuardiansCollection = new ObservableCollection<ActorCharacterInfo>();
-            _guardians = ActorCharacterInfo.GetSampleCharacterData();
-            LoadGuardians();
+            FlowersCollection = new ObservableCollection<FlowerSpeciesInfo>();
+            _flowers = FlowerSpeciesInfo.GetSampleFlowerData();
+            LoadPlants();
         }
 
-        private void LoadGuardians()
+        private void LoadPlants()
         {
             try
             {
-                GuardiansCollection.Clear();
-                foreach (var g in _guardians)
+                FlowersCollection.Clear();
+                foreach (var g in _flowers)
                 {
-                    GuardiansCollection.Add(g);
+                    FlowersCollection.Add(g);
                 }
             }
             catch (Exception ex)

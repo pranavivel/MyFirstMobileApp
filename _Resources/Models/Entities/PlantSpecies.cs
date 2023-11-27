@@ -1,6 +1,6 @@
 ﻿namespace MyFirstMobileApp.Models.Entities
 {
-    public class Plants
+    public class PlantsSpecies
     {
         public string NameofPlant { get; set; }
 
@@ -8,22 +8,22 @@
         public ImageSource EditButton { get; } = Buttons.ButtonEdit;
         public ImageSource DeleteButton { get; } = Buttons.ButtonDelete;
 
-        public Plants()
+        public PlantsSpecies()
         {
 
         }
 
-        public Plants(string name)
+        public PlantsSpecies(string name)
         {
             NameofPlant = name;
         }
 
-        public static List<Plants> GetMovies()
+        public static List<PlantsSpecies> GetPlants()
         {
-            return new List<Plants>
+            return new List<PlantsSpecies>
             {
-                new Plants("Flowers"),
-                new Plants("Trees"),
+                new PlantsSpecies("Flowers"),
+                new PlantsSpecies("Trees"),
             };
         }
     }

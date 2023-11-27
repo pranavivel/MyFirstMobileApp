@@ -10,7 +10,7 @@ namespace MyFirstMobileApp.ViewViewModel.CollectionsUpdatable
 {
     public class UpdateableCollectionViewModel : BaseViewModel
     {
-        public ObservableCollection<MarvelMovies> MovieCollection { get; set; }
+        public ObservableCollection<PlantsSpecies> PlantsCollection { get; set; }
 
         public UpdateableCollectionViewModel()
         {
@@ -18,27 +18,27 @@ namespace MyFirstMobileApp.ViewViewModel.CollectionsUpdatable
             Title = TitleCollections.CollectionTitle;
 
             //Create a new ObservableCollection to store movies
-            MovieCollection = new ObservableCollection<MarvelMovies>();
+            PlantsCollection = new ObservableCollection<PlantsSpecies>();
 
             //Load movies from the data source
-            LoadMovies();
+            LoadPlants();
         }
 
         //Method to load movies from a data source
-        private void LoadMovies()
+        private void LoadPlants()
         {
             IsBusy = true;
 
             try
             {
                 //Clear the existing collection
-                MovieCollection.Clear();
+                PlantsCollection.Clear();
 
                 //Get a list of Marvel movies and add them to the collection
-                var marvelMovies = MarvelMovies.GetMovies();
-                foreach (var movie in marvelMovies)
+                var flowerPlants = PlantsSpecies.GetPlants();
+                foreach (var plant in flowerPlants)
                 {
-                    MovieCollection.Add(movie);
+                    PlantsCollection.Add(plant);
                 }
             }
             catch (Exception ex)
@@ -52,7 +52,7 @@ namespace MyFirstMobileApp.ViewViewModel.CollectionsUpdatable
         }
 
 #pragma warning disable CA1416 // Validate platform compatibility
-        //Command to add a new movie
+        //Command to add a new plant
         public ICommand AddCommand => new Command(async () =>
         {
             //Navigate to the AddCollectionView when the "Add" button is clicked
@@ -67,24 +67,24 @@ namespace MyFirstMobileApp.ViewViewModel.CollectionsUpdatable
             // UpdateableCollectionWButtonsViewModel listens for this event and updates the movie list.
             //****************************************************************************************
             //Subscribe to the "AddMovies" messaging event to receive updated data from AddCollectionView            
-            MessagingCenter.Subscribe<MarvelMovies>(this, "AddMovies", async (data) =>
+            MessagingCenter.Subscribe<PlantsSpecies>(this, "AddPlants", async (plant) =>
             {
                 //Add the new movie data to the collection
-                MovieCollection.Add(data);
+                PlantsCollection.Add(plant);
 
                 //Unsubscribe from the messaging event
-                MessagingCenter.Unsubscribe<MarvelMovies>(this, "AddMovies");
+                MessagingCenter.Unsubscribe<PlantsSpecies>(this, "AddPlants");
             });
         });
 
         //Command to update a movie
-        public ICommand UpdateCommand => new Command<MarvelMovies>(async movie =>
+        public ICommand UpdateCommand => new Command<PlantsSpecies>(async plant =>
         {
             //Get the index of the selected movie in the collection
-            var index = MovieCollection.IndexOf(movie);
+            var index = PlantsCollection.IndexOf(plant);
 
-            //Navigate to the EditCollectionView to edit the selected movie when the Update Button is Clicked
-            await Application.Current.MainPage.Navigation.PushAsync(new EditCollectionView(movie));
+            //Navigate to the EditCollectionView to edit the selected plant when the Update Button is Clicked
+            await Application.Current.MainPage.Navigation.PushAsync(new EditCollectionView(plant));
 
             //****************************************************************************************
             // A messaging event is a way for different parts of your app to communicate.
@@ -94,18 +94,18 @@ namespace MyFirstMobileApp.ViewViewModel.CollectionsUpdatable
             // UpdateableCollectionWButtonsViewModel listens for this event and updates the movie list.
             //****************************************************************************************
             //Subscribe to the "UpdateMovies" messaging event to receive updated data from EditCollectionView            
-            MessagingCenter.Subscribe<MarvelMovies>(this, "UpdateMovies", updatedMovie =>
+            MessagingCenter.Subscribe<PlantsSpecies>(this, "UpdateMovies", updatedPlant =>
             {
                 //Update the movie in the collection with the edited data
-                MovieCollection[index] = updatedMovie;
+                PlantsCollection[index] = updatedPlant;
             });
         });
 
         //Command to delete a movie
-        public ICommand DeleteCommand => new Command<MarvelMovies>(movie =>
+        public ICommand DeleteCommand => new Command<PlantsSpecies>(plant =>
         {
             //Remove the selected movie from the collection
-            MovieCollection.Remove(movie);
+            PlantsCollection.Remove(plant);
         });
 #pragma warning restore CA1416 // Validate platform compatibility
 

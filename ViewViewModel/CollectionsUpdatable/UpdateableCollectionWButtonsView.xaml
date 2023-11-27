@@ -23,15 +23,15 @@
         <BoxView HeightRequest="2" BackgroundColor="#000000" />
 
         <RefreshView IsRefreshing="{Binding IsBusy, Mode=TwoWay}" Command="{Binding RefreshCommand}">
-            <CollectionView x:Name="ItemsCollectionView" ItemsSource="{Binding MovieCollection, Mode=TwoWay}"
+            <CollectionView x:Name="ItemsCollectionView" ItemsSource="{Binding PlantCollection, Mode=TwoWay}"
                             SelectionMode="None" ItemsLayout="VerticalList">
 
                 <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="model:MarvelMovies">
+                    <DataTemplate x:DataType="model:PlantsSpecies">
                         <StackLayout>
-                            <!-- FlexLayout with NameOfMovie and buttons -->
+                            <!-- FlexLayout with NameOfPlant and buttons -->
                             <FlexLayout AlignItems="Start">
-                                <Label Text="{Binding NameofMovie, Mode=TwoWay}" FontAttributes="Bold"
+                                <Label Text="{Binding NameofPlant, Mode=TwoWay}" FontAttributes="Bold"
                                        HorizontalTextAlignment="Start" TextColor="Black" FontSize="Medium"
                                        FlexLayout.Grow="1" />
 
