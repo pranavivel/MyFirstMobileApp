@@ -2,7 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:MyFirstMobileApp.Models.Entities"
              x:Class="MyFirstMobileApp.ViewViewModels.CollectionsUpdatable.UpdateableCollectionWButtonsView"
-             Title="{Binding Title}">
+             Title="{Binding UpdatableCollectionWButtonsView}">
 
     <!-- Applying a "Style" to the buttons. This will provide space between the buttons -->
     <ContentPage.Resources>
@@ -24,7 +24,7 @@
 
         <RefreshView IsRefreshing="{Binding IsBusy, Mode=TwoWay}" Command="{Binding RefreshCommand}">
             <CollectionView x:Name="ItemsCollectionView" ItemsSource="{Binding PlantCollection, Mode=TwoWay}"
-                            SelectionMode="None" ItemsLayout="VerticalList">
+                         SelectionMode="None" ItemsLayout="VerticalList">
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:PlantsSpecies">
@@ -32,15 +32,15 @@
                             <!-- FlexLayout with NameOfPlant and buttons -->
                             <FlexLayout AlignItems="Start">
                                 <Label Text="{Binding NameofPlant, Mode=TwoWay}" FontAttributes="Bold"
-                                       HorizontalTextAlignment="Start" TextColor="Black" FontSize="Medium"
-                                       FlexLayout.Grow="1" />
+                                    HorizontalTextAlignment="Start" TextColor="Black" FontSize="Medium"
+                                    FlexLayout.Grow="1" />
 
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
                                     <Button Text="Update" Command="{Binding Path=BindingContext.UpdateCommand, Source={x:Reference ItemsCollectionView}}"
-                                            CommandParameter="{Binding .}" TextTransform="None" HorizontalOptions="End" />
+                                         CommandParameter="{Binding .}" TextTransform="None" HorizontalOptions="End" />
 
                                     <Button Text="Delete" Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference ItemsCollectionView}}"
-                                            CommandParameter="{Binding .}" TextTransform="None" HorizontalOptions="End" />
+                                         CommandParameter="{Binding .}" TextTransform="None" HorizontalOptions="End" />
                                 </StackLayout>
                             </FlexLayout>
 

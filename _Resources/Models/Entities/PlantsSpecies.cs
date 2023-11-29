@@ -1,4 +1,4 @@
-﻿namespace MyFirstMobileApp.Models.Entities
+namespace MyFirstMobileApp.Models.Entities
 {
     public class PlantsSpecies
     {
