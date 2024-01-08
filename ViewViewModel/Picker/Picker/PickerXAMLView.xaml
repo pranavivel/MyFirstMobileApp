@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstMobileApp.ViewViewModel.Picker.Picker.PickerXAMLView"
+             Title="PickerXAMLView">
+
+    
+<StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+
+
+    <Label Text="Click Below" FontSize="Large" FontAttributes="Bold,Italic" Margin="20" MinimumWidthRequest="130" HorizontalOptions="Center" />
+
+
+    <BoxView HeightRequest="3" BackgroundColor="#000000" WidthRequest="375" />
+
+
+    <StackLayout>
+
+
+        <Picker x:Name="pickerXAML" Title="Select on Awesome 70's Muscle Car" FontSize="Large" TitleColor="DarkRed" SelectedItem="{Binding SelectedItem}" >
+
+
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>1970 Chevy Corvette</x:String>
+                    <x:String>1979 Chevy Camaro</x:String>
+                    <x:String>1970 Chevy Nova</x:String>
+                    <x:String>1975 Dodge Camaro</x:String>
+                    <x:String>1972 Pontiac GTO</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+
+
+        </Picker>
+
+
+        <BoxView HeightRequest="3" BackgroundColor="#000000" WidthRequest="375" />
+
+
+        <ImageButton BackgroundColor="Transparent" Source="{Binding SubmitButton}" Command="{Binding OnSubmitClicked}" Margin="10" />
+
+
+    </StackLayout>
+</StackLayout>
+</ContentPage>

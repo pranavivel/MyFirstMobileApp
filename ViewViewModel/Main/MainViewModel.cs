@@ -4,6 +4,7 @@ using MyFirstMobileApp.ViewViewModel.Layouts.LayoutContents;
 using System.Windows.Input;
 using MyFirstMobileApp.ViewViewModels.Collections;
 using MyFirstMobileApp._Resources.Models.Titles;
+using MyFirstMobileApp.ViewViewModel.InteractiveControls.Stepper;
 
 namespace MyFirstMobileApp.ViewViewModel.Main;
 
@@ -12,7 +13,7 @@ public class MainViewModel : BaseViewModel
     public String LayoutTitle { get; set; } = TitleMain.TitleLayout;
     public String ImagesTitle { get; set; } = TitleMain.TitleImages;
     public String CollectionTitle { get; set; } = TitleMain.TitleCollections;
-    public String Button11Title { get; set; } = TitleMain.TitleButton11;
+    public String ControlsTitle { get; set; } = TitleMain.TitleControls;
     //public String SQLiteTitle { get; set; } = TitleMain.TitleSQLite;
 
     public string Layouts { get; set; } 
@@ -20,7 +21,7 @@ public class MainViewModel : BaseViewModel
 	public ICommand OnLayoutsClicked { get; set; }
     public ICommand OnImagesClicked { get; set; }
     public ICommand OnCollectionsClicked { get; set; }
-    //public ICommand OnSQLiteClicked { get; set; }
+    public ICommand OnControlsClicked { get; set; }
 
 
 
@@ -31,7 +32,7 @@ public class MainViewModel : BaseViewModel
 		OnLayoutsClicked = new Command(OnLayoutsClickedAsync);
         OnImagesClicked = new Command(OnImagesClickedAsync);
         OnCollectionsClicked = new Command(OnCollectionsClickedAsync);
-        //OnSQLiteClicked = new Command(OnSQLiteClickedAsync);
+        OnControlsClicked = new Command(OnControlsClickedAsync);
         
 
     }
@@ -51,9 +52,9 @@ public class MainViewModel : BaseViewModel
         await Application.Current.MainPage.Navigation.PushAsync(new CollectionMenuView());
     }
 
-    //private async void OnSQLiteClickedAsync()
-    //{
-        //await Application.Current.MainPage.Navigation.PushAsync(new CollectionsMenuView());
-    //}
+    private async void OnControlsClickedAsync()
+    {
+        await Application.Current.MainPage.Navigation.PushAsync(new StepperView());
+    }
 
 }

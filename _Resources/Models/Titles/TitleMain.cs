@@ -19,6 +19,6 @@ namespace MyFirstMobileApp._Resources.Models.Titles
         public static string TitleButton11 { get; set; } = "Button 1 1";
 
         public static string TitleSQLite { get; set; } = "SQLite";
-
+        public static string TitleControls { get; internal set; }
     }
 }

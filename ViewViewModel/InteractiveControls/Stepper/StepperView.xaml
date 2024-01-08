@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstMobileApp.ViewViewModel.InteractiveControls.Stepper.StepperView"
+             Title="StepperView">
+
+    <StackLayout Margin="20">
+
+        <Label x:Name="RotatingLable" 
+               Text="ROTATING TEXT!" 
+               FontSize="Large" 
+               FontAttributes="Bold,Italic" 
+               HorizontalOptions="Center" 
+               VerticalOptions="CenterAndExpand" />
+
+        <Stepper x:Name='stepper' 
+                 Maximum="360" 
+                 Increment="10" 
+                 BackgroundColor="Blue"
+                 HorizontalOptions="Center" 
+                 ValueChanged="OnStepperValueChanged"/>
+
+        <Label x:Name="DisplayLabel" FontSize="Large"
+               FontAttributes="Bold" 
+               Text="{Binding Source={x:Reference stepper}, Path=Value, StringFormat='The Stepper value is {O:FO}'}" 
+               HorizontalOptions="Center" />
+
+    </StackLayout>
+    
+</ContentPage>
