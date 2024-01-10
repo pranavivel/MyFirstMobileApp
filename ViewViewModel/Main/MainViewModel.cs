@@ -5,6 +5,7 @@ using System.Windows.Input;
 using MyFirstMobileApp.ViewViewModels.Collections;
 using MyFirstMobileApp._Resources.Models.Titles;
 using MyFirstMobileApp.ViewViewModel.InteractiveControls.Stepper;
+using MyFirstMobileApp.ViewViewModel.InteractiveControls.ControlsMenu;
 
 namespace MyFirstMobileApp.ViewViewModel.Main;
 
@@ -54,7 +55,7 @@ public class MainViewModel : BaseViewModel
 
     private async void OnControlsClickedAsync()
     {
-        await Application.Current.MainPage.Navigation.PushAsync(new StepperView());
+        await Application.Current.MainPage.Navigation.PushAsync(new ControlsMenuView());
     }
 
 }

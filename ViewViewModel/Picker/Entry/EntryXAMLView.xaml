@@ -8,13 +8,13 @@
 
         <Entry x:Name="EntryValue"
            Placeholder="Enter Text Here"
-           PlaceholderColor="Blue"
-           TextColor="Crimson"
+           PlaceholderColor="Khaki"
+           TextColor="SandyBrown"
            WidthRequest="300"
            HorizontalOptions="Center"/>
 
         <BoxView HeightRequest="3"
-           BackgroundColor="#000000"
+           BackgroundColor="IndianRed"
            WidthRequest="300"/>
 
 
@@ -22,8 +22,8 @@
            HorizontalOptions="Center"
            FontAttributes="Bold, Italic"
            Margin="10"
-           TextColor="White"
-           BackgroundColor="Blue"
+           TextColor="DarkGoldenrod"
+           BackgroundColor="Wheat"
            Clicked="OnSubmitClicked"/>
 
 

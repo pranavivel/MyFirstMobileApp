@@ -26,32 +26,32 @@
 
             <Button Grid.Row="0"
                 Grid.Column="0"
-                Text="{Binding SliderTitle}" 
+                Text="Slider" 
                 Command="{Binding OnSliderClicked}" />
 
             <Button Grid.Row="0"
                 Grid.Column="1"
-                Text="{Binding StepperTitle}" 
+                Text="Stepper" 
                 Command="{Binding OnStepperClicked}" />
 
             <Button Grid.Row="1"
                 Grid.Column="0"
-                Text="{Binding SwitchTitle}" 
+                Text="Switch" 
                 Command="{Binding OnSwitchClicked}" />
 
             <Button Grid.Row="1"
                 Grid.Column="1"
-                Text="{Binding EntryTitle}" 
+                Text="Entry" 
                 Command="{Binding OnEntryClicked}" />
 
             <Button Grid.Row="0"
                 Grid.Column="2"
-                Text="{Binding PickerTitle}" 
+                Text="Picker" 
                 Command="{Binding OnPickerClicked}" />
 
             <Button Grid.Row="1"
                     Grid.Column="2"
-                    Text="{Binding DateAndTimePickerTitle}" 
+                    Text="DateTime" 
                     Command="{Binding OnDateAndTimePickerClicked}" />
 
         </Grid>

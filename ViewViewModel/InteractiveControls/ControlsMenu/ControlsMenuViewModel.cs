@@ -67,7 +67,7 @@ namespace MyFirstMobileApp.ViewViewModel.InteractiveControls.ControlsMenu
         }
         private async void onDateAndTimePickerClickedAsync()
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new DatePickerMenuView());
+            await Application.Current.MainPage.Navigation.PushAsync(new DatePickerXAMLView());
         }
 
         private async void OnSubmitClickedAsync()

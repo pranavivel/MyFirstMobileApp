@@ -18,12 +18,12 @@
         <Label Text="Start Date" FontAttributes="Bold" FontSize="Large"  TextColor="Blue" HorizontalOptions="CenterAndExpand" />
 
         <DatePicker x:Name="StartDatePicker"  DateSelected="StartDatePicker_DateSelected" 
-                           BackgroundColor="LightSeaGreen" TextColor="White" InputTransparent="False" />
+                           BackgroundColor="Honeydew" TextColor="LawnGreen" InputTransparent="False" />
 
-        <Label Text="End Date" FontAttributes="Bold" FontSize="Large" TextColor="Blue"  HorizontalOptions="CenterAndExpand" />
+        <Label Text="End Date" FontAttributes="Bold" FontSize="Large" TextColor="PapayaWhip"  HorizontalOptions="CenterAndExpand" />
 
         <DatePicker x:Name="EndDatePicker" DateSelected="EndDatePicker_DateSelected" 
-                           BackgroundColor="Red" TextColor="White" InputTransparent="False" />
+                           BackgroundColor="Chocolate" TextColor="HotPink" InputTransparent="False" />
 
         <Button BackgroundColor="Transparent" ImageSource="{Binding SubmitButton}" Clicked="Button_Clicked" />
 

@@ -20,7 +20,7 @@ namespace MyFirstMobileApp.ViewViewModel.Picker.Picker
 
 
         public List<string> CharacterList { get; set; }
-        List<ActorCharacterInfo> _characters;
+        List<FlowerSpeciesInfo> _characters;
         string _selectedItem = string.Empty;
 
 
@@ -33,7 +33,7 @@ namespace MyFirstMobileApp.ViewViewModel.Picker.Picker
             Title = TitlePicker.PickerVMTitle;
 
 
-            //Get Characters from ActorCharacterInfo Class to Populate Picker
+            //Get Characters from FlowerSpeciesInfo Class to Populate Picker
             this.GetCharacterList();
 
 
@@ -43,10 +43,10 @@ namespace MyFirstMobileApp.ViewViewModel.Picker.Picker
 
         private void GetCharacterList()
         {
-            var allCharacterInfo = ActorCharacterInfo.GetSampleCharacterData();
+            var allCharacterInfo = FlowerSpeciesInfo.GetSampleFlowerData();
 
             // Filter and map the character names from the list of ActorCharacterInfo objects
-            CharacterList = allCharacterInfo.Select(info => info.CharacterName).ToList();
+            CharacterList = allCharacterInfo.Select(info => info.FlowerName).ToList();
             _characters = allCharacterInfo;
         }
 
@@ -73,15 +73,15 @@ namespace MyFirstMobileApp.ViewViewModel.Picker.Picker
             var selectedCharacterName = _selectedItem;
 
             //Find the ActorCharacterInfo object based on the selected character name
-            var selectedCharacterInfo = _characters.FirstOrDefault(info => info.CharacterName == selectedCharacterName);
+            var selectedCharacterInfo = _characters.FirstOrDefault(info => info.FlowerName == selectedCharacterName);
 
             if (selectedCharacterInfo != null)
             {
                 //Combining actor’s name and character’s name into a single string for display
-                string name = $"{selectedCharacterInfo.ActorName} As {selectedCharacterInfo.CharacterName}";
+                string name = $"{selectedCharacterInfo.FlowerName} As {selectedCharacterInfo.FlowerName}";
 
                 //Use selectedCharacterInfo.ActorImage for the actor’s image
-                await Application.Current.MainPage.Navigation.PushAsync(new PickerResultsView(name, selectedCharacterInfo.ActorImage));
+                await Application.Current.MainPage.Navigation.PushAsync(new PickerResultsView(name, selectedCharacterInfo.FlowerImage));
             }
         }
     }

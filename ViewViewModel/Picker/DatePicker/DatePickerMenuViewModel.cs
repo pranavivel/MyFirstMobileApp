@@ -1,4 +1,5 @@
-﻿using MyFirstMobileApp.Models.Entities;
+﻿using MyFirstMobileApp._Resources.Models.Titles;
+using MyFirstMobileApp.Models.Entities;
 using MyFirstMobileApp.ViewModels;
 using System;
 using System.Collections.Generic;
