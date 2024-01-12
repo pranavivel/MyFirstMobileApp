@@ -11,7 +11,7 @@
         <BoxView HeightRequest="3" BackgroundColor="#000000" WidthRequest="375" />
 
         <StackLayout>
-            <Picker x:Name="pickerXAML" Title="Select a Flower" FontSize="Large" TitleColor="MintCream" SelectedItem="{Binding SelectedItem}">
+            <Picker x:Name="pickerXAML" Title="Select a Flower" FontSize="Large" TitleColor="Blue" SelectedItem="{Binding SelectedItem}">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String> Lotus </x:String>

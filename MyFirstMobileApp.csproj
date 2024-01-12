@@ -137,6 +137,9 @@
 	  <MauiXaml Update="ViewViewModel\Picker\Picker\PickerResultsView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModel\Picker\Picker\PickerView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ViewViewModel\Picker\Picker\PickerVMView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

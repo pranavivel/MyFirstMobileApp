@@ -12,7 +12,7 @@ namespace MyFirstMobileApp._Resources.Models.Titles
         public static string PickerXAMLTitle { get; } = "Picker XAML";
         public static string PickerVMTitle { get; } = "Picker VM";
         public static string PickerResultsTitle { get; } = "Picker Results";
-
+        public static string PickerTitle { get; } = "Pikcer View";
     }
 
 }

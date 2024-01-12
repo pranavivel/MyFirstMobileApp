@@ -58,14 +58,17 @@ namespace MyFirstMobileApp.ViewViewModel.Picker.Picker
             }
 
 
-            List<Cars> cars = Cars.GetCars();
+            List<FlowerSpeciesInfo> flower = FlowerSpeciesInfo.GetSampleFlowerData();
 
 
             //Get Selection
-            var result = cars.FirstOrDefault(x => x.Car.Equals(_selectedItem));
+            var result = flower.FirstOrDefault(x => x.FlowerName.Equals(_selectedItem));
 
+            if (result != null)
+                await Application.Current.MainPage.Navigation.PushAsync(new PickerResultsView(result.FlowerName, result.FlowerImage));
+            else
+                await Application.Current.MainPage.DisplayAlert(TitlePicker.PickerXAMLTitle, "Selection NOT found!", "Ok");
 
-            await Application.Current.MainPage.Navigation.PushAsync(new PickerResultsView(result.Car, result.Image));
         }
     }
 
